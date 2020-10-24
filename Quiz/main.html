@@ -18,7 +18,7 @@ body {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 15%;
-  height: 300px;
+  height: 100vh;
 }
 
 /* Style the buttons inside the tab */
@@ -53,7 +53,7 @@ body {
   border: 1px solid #ccc;
   border: none;
   margin: 70px;
-  height:300px;
+  height:100vh;
   color:white;
   background-color:rgb(90, 51, 153);
 }
@@ -76,8 +76,91 @@ body {
 </div>
 
 <div id="Quiz 1" class="tabcontent">
-  <h3>Quiz 1</h3>
-  <p>content</p> 
+  <h3>Quiz 1</h3> 
+        <div>
+          <p class="question">1. Which of the following is true</p>
+          <ul>
+          <input class="answer" type="radio" name="q1" value="1">
+            <label id="correctString1">gets() can read a string with spaces but a normal scanf() with %s can not.</label>
+          <br>
+            <input class="answer" type="radio" name="q1" value="0">
+            <label>gets() can read a string with newline chacters but a normal scanf() with %s can not.</label>
+            <br>
+            <input class="answer" type="radio" name="q1" value="0">
+            <label>gets() can always replace scanf() without any additional code.</label>
+            <br>
+            <input class="answer" type="radio" name="q1" value="0">
+            <label>None of the above</label>
+          </ul>
+        </div>
+        <div>
+          <p class="question">2. Quiz question #2</p>
+  
+          <ul>
+            <input class="answer" type="radio" name="q2" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q2" value="1">
+            <label id="correctString2">correct answer 2</label>
+            <br>
+            <input class="answer" type="radio" name="q2" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q2" value="0">
+            <label>wrong answer</label>
+          </ul>
+        </div>
+        <div>
+          <p class="question">3. Quiz question #3</p>
+  
+          <ul>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="1">
+            <label id="correctString3">correct answer 3</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label>wrong answer</label>
+          </ul>
+      </div>
+        <div>
+          <p class="question">4. Quiz question #4</p>
+  
+          <ul>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="1">
+            <label id="correctString4">correct answer 4</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>wrong answer</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>wrong answer</label>
+          </ul>
+        </div>
+  <br/>
+    <div class="submitter">
+            <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+            type="submit" value="Submit" />
+      </div>
+    
+  <!--show only wrong answers on submit-->
+      <div class="quizAnswers" id="correctAnswer1"></div>
+        <div class="quizAnswers" id="correctAnswer2"></div>
+      <div class="quizAnswers" id="correctAnswer3"></div>
+      <div class="quizAnswers" id="correctAnswer4"></div>
+  
+  <!--show score upon submit-->
+      <div>
+        <h2 class="quizScore" id="userScore"></h2>
+      </div>
+    </div>
 </div>
 
 <div id="Quiz 2" class="tabcontent">
@@ -103,6 +186,6 @@ function openQuiz(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-   
+  
 </body>
 </html> 
