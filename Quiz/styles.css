@@ -1,16 +1,15 @@
 body{
-    border: 1px dotted black;
+    /* border: 1.9px dotted black; */
     font-family: "Lato", sans-serif;
-    background-color: rgb(230, 239, 250);
+    background-color: rgb(230, 233, 250);
   }
 
   /* Style the tab */
 .tab {
-  float: left;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(204, 204, 204, 0);
   background-color: #f1f1f1;
-  width: 15%;
-  height: 250vh;
+  width: 100%;
+  display: flex;
 }
 
 /* Style the buttons inside the tab */
@@ -35,16 +34,14 @@ body{
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: rgb(204, 204, 204);
 }
 
 /* Style the tab content */
 .tabcontent {
-  float: le;
-  padding: 2px 2px 2px 2px;
-  border: 1px solid #ccc;
-  border: none;
-  height:250vh;
+  margin: 10px 5px 5px 5px;
+  padding: 0px 10px 10px 18px;
+  border: 1.5px solid #ccc;
 }
   
   p.question {
@@ -117,7 +114,7 @@ body{
   
   table {
     background-color: #F2F2F2;
-        border:1px solid #BDBDBD;
+    border:1px solid #BDBDBD;
     border-radius:5px;
     padding:10px;
     padding-left:25px;
