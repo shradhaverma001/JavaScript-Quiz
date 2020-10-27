@@ -3,61 +3,7 @@
 <head>
     <title>QUIZ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box
-  }
-body {
-  font-family: "Lato", sans-serif;
-  background-color: rgb(230, 239, 250);
-  }
-
-/* Style the tab */
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 15%;
-  height: 100vh;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  float: le;
-  padding: 2px 2px 2px 2px;
-  border: 1px solid #ccc;
-  border: none;
-  margin: 70px;
-  height:100vh;
-  color:white;
-  background-color:rgb(90, 51, 153);
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -94,56 +40,168 @@ body {
           </ul>
         </div>
         <div>
-          <p class="question">2. Quiz question #2</p>
+          <p class="question">2. #include &lt;stdio.h&gt;<br>
+
+            int main()<br>
+            {<br>
+                int i = (1, 2, 3);<br>
+                
+                printf("%d", i);<br>
+                
+                return 0;<br>
+            }<br>
+            </p>
   
           <ul>
             <input class="answer" type="radio" name="q2" value="0">
-            <label>wrong answer</label>
+            <label>1</label>
             <br>
             <input class="answer" type="radio" name="q2" value="1">
-            <label id="correctString2">correct answer 2</label>
+            <label id="correctString2">3</label>
             <br>
             <input class="answer" type="radio" name="q2" value="0">
-            <label>wrong answer</label>
+            <label>Garbage value</label>
             <br>
             <input class="answer" type="radio" name="q2" value="0">
-            <label>wrong answer</label>
+            <label>Compile time error</label>
           </ul>
         </div>
         <div>
-          <p class="question">3. Quiz question #3</p>
+          <p class="question">3. #include &lt;stdio.h&gt;<br> 
+            int i;<br>
+            int main()<br> 
+            {<br>
+                if (i);<br> 
+                else<br>
+                    printf("Ëlse");<br> 
+                return 0;<br> 
+            } <br>
+            What is correct about the above program?</p>
   
           <ul>
             <input class="answer" type="radio" name="q3" value="0">
-            <label>wrong answer</label>
+            <label> if block is executed.</label>
             <br>
             <input class="answer" type="radio" name="q3" value="1">
-            <label id="correctString3">correct answer 3</label>
+            <label id="correctString3">else block is executed.</label>
             <br>
             <input class="answer" type="radio" name="q3" value="0">
-            <label>wrong answer</label>
+            <label>It is unpredictable as i is not initialized.</label>
             <br>
             <input class="answer" type="radio" name="q3" value="0">
-            <label>wrong answer</label>
+            <label>Error: misplaced else</label>
           </ul>
       </div>
         <div>
-          <p class="question">4. Quiz question #4</p>
+          <p class="question">4. Which of the following is true about arrays in C.</p>
   
           <ul>
             <input class="answer" type="radio" name="q4" value="0">
-            <label>wrong answer</label>
+            <label> For every type T, there can be an array of T.</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>When an array is passed to a function, C compiler creates a copy of array.</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>2D arrays are stored in column major form
+            </label>
             <br>
             <input class="answer" type="radio" name="q4" value="1">
-            <label id="correctString4">correct answer 4</label>
-            <br>
-            <input class="answer" type="radio" name="q4" value="0">
-            <label>wrong answer</label>
-            <br>
-            <input class="answer" type="radio" name="q4" value="0">
-            <label>wrong answer</label>
+            <label id="correctString4">For every type T except void and function type, there can be an array of T.</label>
           </ul>
         </div>
+        <div>
+          <p class="question">5. Predict output of following program<br>
+            int main()<br> 
+            {<br>
+                int i;<br> 
+                int arr[5] = {1};<br> 
+                for (i = 0; i &lt; 5; i++)<br> 
+                    printf("%d ", arr[i]);<br>
+                return 0;<br> 
+            } </p>
+  
+          <ul>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label> 1 followed by four garbage values</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label>1 1 1 1 1</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="1">
+            <label id="correctString3">1 0 0 0 0</label>
+            <br>
+            <input class="answer" type="radio" name="q3" value="0">
+            <label>0 0 0 0 0</label>
+          </ul>
+      </div>
+        <div>
+          <p class="question">6. What does the following fragment of C-program print?<br>
+              char c[] = "GATE2011";<br>
+              char *p =c;<br>
+              printf("%s", p + p[3] - p[1]);<br>
+          </p>
+  
+          <ul>
+              <input class="answer" type="radio" name="q4" value="1">
+              <label id="correctString4">2011</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>E2011</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>GATE2011</label>
+            <br>
+            <input class="answer" type="radio" name="q4" value="0">
+            <label>011</label>
+          </ul>
+        </div>
+        <div>
+        <p class="question">7. Predict the output of below program:<br>
+            #include &lt;stdio.h&gt;<br>
+                int main()<br>
+                {<br>
+                  int arr[5];<br> 
+                  // Assume base address of arr is 2000 and size of integer is 32 bit<br> 
+                  printf("%u %u", arr + 1, &arr + 1);<br>
+                  return 0;<br>
+                }</p>
+
+        <ul>
+          <input class="answer" type="radio" name="q2" value="0">
+          <label>2004 2004</label>
+          <br>
+          <input class="answer" type="radio" name="q2" value="0">
+          <label>The program fails to compile because Address-of operator cannot be used with array name</label>
+          <br>
+          <input class="answer" type="radio" name="q2" value="0">
+          <label>2004 Garbage value</label>
+          <br>
+          <input class="answer" type="radio" name="q2" value="1">
+          <label id="correctString2">2004 2020</label>
+        </ul>
+      </div>
+      <div>
+        <p class="question">8. Which of the following is not a valid declaration in C?<br>
+            1. short int x;<br>
+            2. signed short x;<br> 
+            3. short x;<br>
+            4. unsigned short x; 
+        </p>
+        <ul>
+          <input class="answer" type="radio" name="q1" value="0">
+          <label>3 and 4</label>
+        <br>
+          <input class="answer" type="radio" name="q1" value="0">
+          <label>2</label>
+          <br>
+          <input class="answer" type="radio" name="q1" value="0">
+          <label>1</label>
+          <br>
+          <input class="answer" type="radio" name="q1" value="1">
+          <label id="correctString1">All are valid</label>
+        </ul>
+      </div>
   <br/>
     <div class="submitter">
             <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
@@ -161,31 +219,13 @@ body {
         <h2 class="quizScore" id="userScore"></h2>
       </div>
     </div>
-</div>
 
 <div id="Quiz 2" class="tabcontent">
   <h3>Quiz 2</h3>
   <p>content</p>
 </div>
 
-<script>
-function openQuiz(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+<script src="quiz.js"></script>
   
 </body>
 </html> 
