@@ -202,7 +202,56 @@
           <label id="correctString1">All are valid</label>
         </ul>
       </div>
-  <br/>
+      <div>
+        <p class="question">9. Consider the following C program segment:<br>
+          char p[20];<br>
+          char *s = "string";<br> 
+          int length = strlen(s);<br> 
+          int i;<br>
+          for (i = 0; i &lt; length; i++)<br> 
+            p[i] = s[length — i];<br>
+          printf("%s", p); <br>
+          The output of the program is?<br> 
+        </p>
+
+        <ul>
+          <input class="answer" type="radio" name="q3" value="0">
+          <label> gnirts</label>
+          <br>
+          <input class="answer" type="radio" name="q3" value="0">
+          <label>gnirt</label>
+          <br>
+          <input class="answer" type="radio" name="q3" value="1">
+          <label id="correctString3">no output is printed</label>
+          <br>
+          <input class="answer" type="radio" name="q3" value="0">
+          <label>string</label>
+        </ul>
+    </div>
+    <div>
+      <p class="question">10. In C, what is the meaning of following function prototype with empty parameter list<br>
+
+        void fun() <br>
+      { <br>
+        /* .... */<br>
+      }
+        </p>
+
+      <ul>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label> Function can only be called without any parameter</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="1">
+        <label id="correctString2">Function can be called with any number of parameters of any types</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label> Function can be called with any number of integer parameters.</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label> Function can be called with one integer parameter.
+        </label>
+      </ul>
+    </div>
     <div class="submitter">
             <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
             type="submit" value="Submit" />
@@ -222,7 +271,179 @@
 
 <div id="Quiz 2" class="tabcontent">
   <h3>Quiz 2</h3>
-  <p>content</p>
+  <div>
+  <p class="question">1. How is document type initialized in HTML5?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>  &lt;/DOCTYPE HTML&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="1">
+    <label id="correctString2"> &lt;!DOCTYPE HTML&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>  &lt;/DOCTYPE&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label> &lt;/DOCTYPE html&gt;</label>
+  </ul>
+</div>
+  <div>
+    <p class="question">2. What is the full form of CSS?</p>
+
+    <ul>
+      <input class="answer" type="radio" name="q3" value="0">
+      <label>  Color style sheet</label>
+      <br>
+      <input class="answer" type="radio" name="q3" value="0">
+      <label> Creative style sheet</label>
+      <br>
+      <input class="answer" type="radio" name="q3" value="1">
+      <label id="correctString3">Cascading style sheet</label>
+      <br>
+      <input class="answer" type="radio" name="q3" value="0">
+      <label>Concatenated style sheet</label>
+    </ul>
+</div>
+<div>
+  <p class="question">3. Which of the following attributes is used to add link to any element?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label> link</label>
+  <br>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label>ref</label>
+    <br>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label>newref</label>
+    <br>
+    <input class="answer" type="radio" name="q1" value="1">
+    <label id="correctString1">href</label>
+  </ul>
+</div>
+<div>
+  <p class="question">4. Which of the following is the correct CSS syntax?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>p:color=green, font-size=15px</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>{p:color=green, font-size=15px}</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>p {color:green, font-size:15px;}</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="1">
+    <label id="correctString2">p {color:green; font-size:15px;}</label>
+  </ul>
+</div>
+<div>
+  <p class="question">5. What is the HTML tag under which one can write the JavaScript code?</p>
+
+  <ul>
+      <input class="answer" type="radio" name="q4" value="1">
+      <label id="correctString4">&lt;script&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label>&lt;javascript&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label> &lt;scripted&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label>&lt;js&gt;</label>
+  </ul>
+</div>
+<div>
+  <p class="question">6. Which one of the following is the correct way of adding Inline styles.</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label> &lt;p inline style=“font-size:16px”&gt;Hello World&lt;/p&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label> &lt;p inline style=“font-size 16px”&gt;Hello World&lt;/p&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="1">
+    <label id="correctString3">&lt;p style=“font-size:16px;”&gt;Hello World&lt;/p&gt;</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label> &lt;p style=“font-size 16px;”&gt;Hello World&lt;/p&gt;</label>
+  </ul>
+</div>
+<div>
+  <p class="question">7. What is the purpose of using div tags in HTML?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label>  For creating Different styles.</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label>For adding headings.</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="0">
+    <label>For adding titles.</label>
+    <br>
+    <input class="answer" type="radio" name="q4" value="1">
+    <label id="correctString4"> For creating different sections.</label>
+  </ul>
+</div>
+<div>
+  <p class="question">8. Which of the following is not a reserved word in JavaScript?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label> interface</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="1">
+    <label id="correctString3"> program</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label>throws</label>
+    <br>
+    <input class="answer" type="radio" name="q3" value="0">
+    <label>short</label>
+  </ul>
+</div>
+<div>
+  <p class="question">9. Where is the correct place to insert a JavaScript?</p>
+
+  <ul>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>The head section</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="1">
+    <label id="correctString2"> Both the head section and the body section are correct</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>The body section</label>
+    <br>
+    <input class="answer" type="radio" name="q2" value="0">
+    <label>None of the above</label>
+  </ul>
+</div>
+<div>
+  <p class="question">10. Which of the following attributes is used to open an hyperlink in new tab?</p>
+  <ul>
+  <input class="answer" type="radio" name="q1" value="1">
+    <label id="correctString1">target</label>
+  <br>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label>tab</label>
+    <br>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label>href</label>
+    <br>
+    <input class="answer" type="radio" name="q1" value="0">
+    <label>ref</label>
+  </ul>
+</div>
+<div class="submitter">
+  <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+  type="submit" value="Submit" />
+</div>
 </div>
 
 <script src="quiz.js"></script>
