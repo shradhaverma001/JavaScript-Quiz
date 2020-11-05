@@ -61,6 +61,24 @@ function submitQuiz() {
     if (answerScore('q4') === 0) {
         document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
     }
+    if (answerScore('q5') === 0) {
+        document.getElementById('correctAnswer5').innerHTML = correctAnswer('correctString5', 5);
+    }
+    if (answerScore('q6') === 0) {
+        document.getElementById('correctAnswer6').innerHTML = correctAnswer('correctString6', 6);
+    }
+    if (answerScore('q7') === 0) {
+        document.getElementById('correctAnswer7').innerHTML = correctAnswer('correctString7', 7);
+    }
+    if (answerScore('q8') === 0) {
+        document.getElementById('correctAnswer8').innerHTML = correctAnswer('correctString8', 8);
+    }
+    if (answerScore('q9') === 0) {
+        document.getElementById('correctAnswer9').innerHTML = correctAnswer('correctString9', 9);
+    }
+    if (answerScore('q10') === 0) {
+        document.getElementById('correctAnswer10').innerHTML = correctAnswer('correctString10', 10);
+    }
 
 // calculate "possible score" integer
     var questionCountArray = document.getElementsByClassName('question');
@@ -77,6 +95,10 @@ function submitQuiz() {
         showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
     };
     document.getElementById('userScore').innerHTML = showScore;
+}
+
+function nextQuiz(event) {
+    // openQuiz(event, 'Quiz 2');
 }
 
 $(document).ready(function() {
