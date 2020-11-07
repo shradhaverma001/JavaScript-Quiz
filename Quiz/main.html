@@ -4,13 +4,14 @@
     <title>QUIZ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
-<body>
+<body id="all">
 
 <div class="tab">
   <button class="tablinks" onclick="openQuiz(event, 'Home')" id="defaultOpen">Home</button>
-  <button class="tablinks" onclick="openQuiz(event, 'Quiz 1')">C Programming Quiz</button>
-  <button class="tablinks" onclick="openQuiz(event, 'Quiz 2')">HTML, CSS and JavaScript Quiz</button>
+  <button class="tablinks" onclick="openQuiz(event, 'Quiz1')">C</button>
+  <button class="tablinks" onclick="openQuiz(event, 'Quiz2')">HTML, CSS and JS</button>
 </div>
 
 <div id="Home" class="tabcontent">
@@ -19,9 +20,10 @@
     First Quiz contains <b>M</b>ultiple <b>C</b>hoice <b>Q</b>uestions <b>(MCQs)</b> based on C programming language
      and the next quiz is of HTML and CSS. 
   </p>
+  <img src ="img/js3.jpg" class="img-fluid">
 </div>
 
-<div id="Quiz 1" class="tabcontent">
+<div id="Quiz1" class="tabcontent">
   <h1 style="text-align: center">C Programming Quiz</h1> 
         <div>
           <p class="question">1. Which of the following is true</p>
@@ -275,7 +277,7 @@
       </div>
     </div>
 
-<div id="Quiz 2" class="tabcontent">
+<div id="Quiz2" class="tabcontent">
   <h1 style="text-align: center">HTML, CSS and JavaScript Quiz</h1>
   <div>
   <p class="question">1. How is document type initialized in HTML5?</p>
