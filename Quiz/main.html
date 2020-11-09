@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body id="all">
 
 <div class="tab">
   <button class="tablinks" onclick="openQuiz(event, 'Home')" id="defaultOpen">Home</button>
-  <button class="tablinks" onclick="openQuiz(event, 'Quiz1')">C</button>
-  <button class="tablinks" onclick="openQuiz(event, 'Quiz2')">HTML, CSS and JS</button>
+  <button id="quiz1tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz1')">C</button>
+  <button id="quiz2tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz2')">HTML, CSS and JS</button>
 </div>
 
 <div id="Home" class="tabcontent">
@@ -258,23 +259,6 @@
             <input class="quizSubmit" id="nextButton" onClick="nextQuiz(event)"
             type="submit" value="next" />
       </div>
-    
-  <!-- show only wrong answers on submit -->
-      <div class="quizAnswers" id="correctAnswer1"></div>
-        <div class="quizAnswers" id="correctAnswer2"></div>
-      <div class="quizAnswers" id="correctAnswer3"></div>
-      <div class="quizAnswers" id="correctAnswer4"></div>
-      <div class="quizAnswers" id="correctAnswer5"></div>
-        <div class="quizAnswers" id="correctAnswer6"></div>
-      <div class="quizAnswers" id="correctAnswer7"></div>
-      <div class="quizAnswers" id="correctAnswer8"></div>
-      <div class="quizAnswers" id="correctAnswer9"></div>
-      <div class="quizAnswers" id="correctAnswer10"></div>
-  
-  <!--show score upon submit-->
-      <div>
-        <h2 class="quizScore" id="userScore"></h2>
-      </div>
     </div>
 
 <div id="Quiz2" class="tabcontent">
@@ -283,16 +267,16 @@
   <p class="question">1. How is document type initialized in HTML5?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q11" value="0">
     <label>  &lt;/DOCTYPE HTML&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="1">
-    <label id="correctString2"> &lt;!DOCTYPE HTML&gt;</label>
+    <input class="answer" type="radio" name="q11" value="1">
+    <label id="correctString11"> &lt;!DOCTYPE HTML&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q11" value="0">
     <label>  &lt;/DOCTYPE&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q11" value="0">
     <label> &lt;/DOCTYPE html&gt;</label>
   </ul>
 </div>
@@ -300,16 +284,16 @@
     <p class="question">2. What is the full form of CSS?</p>
 
     <ul>
-      <input class="answer" type="radio" name="q3" value="0">
+      <input class="answer" type="radio" name="q12" value="0">
       <label>  Color style sheet</label>
       <br>
-      <input class="answer" type="radio" name="q3" value="0">
+      <input class="answer" type="radio" name="q12" value="0">
       <label> Creative style sheet</label>
       <br>
-      <input class="answer" type="radio" name="q3" value="1">
-      <label id="correctString3">Cascading style sheet</label>
+      <input class="answer" type="radio" name="q12" value="1">
+      <label id="correctString12">Cascading style sheet</label>
       <br>
-      <input class="answer" type="radio" name="q3" value="0">
+      <input class="answer" type="radio" name="q12" value="0">
       <label>Concatenated style sheet</label>
     </ul>
 </div>
@@ -317,50 +301,50 @@
   <p class="question">3. Which of the following attributes is used to add link to any element?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q13" value="0">
     <label> link</label>
   <br>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q13" value="0">
     <label>ref</label>
     <br>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q13" value="0">
     <label>newref</label>
     <br>
-    <input class="answer" type="radio" name="q1" value="1">
-    <label id="correctString1">href</label>
+    <input class="answer" type="radio" name="q13" value="1">
+    <label id="correctString13">href</label>
   </ul>
 </div>
 <div>
   <p class="question">4. Which of the following is the correct CSS syntax?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q14" value="0">
     <label>p:color=green, font-size=15px</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q14" value="0">
     <label>{p:color=green, font-size=15px}</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q14" value="0">
     <label>p {color:green, font-size:15px;}</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="1">
-    <label id="correctString2">p {color:green; font-size:15px;}</label>
+    <input class="answer" type="radio" name="q14" value="1">
+    <label id="correctString14">p {color:green; font-size:15px;}</label>
   </ul>
 </div>
 <div>
   <p class="question">5. What is the HTML tag under which one can write the JavaScript code?</p>
 
   <ul>
-      <input class="answer" type="radio" name="q4" value="1">
-      <label id="correctString4">&lt;script&gt;</label>
+      <input class="answer" type="radio" name="q15" value="1">
+      <label id="correctString15">&lt;script&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q15" value="0">
     <label>&lt;javascript&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q15" value="0">
     <label> &lt;scripted&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q15" value="0">
     <label>&lt;js&gt;</label>
   </ul>
 </div>
@@ -368,16 +352,16 @@
   <p class="question">6. Which one of the following is the correct way of adding Inline styles.</p>
 
   <ul>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q16" value="0">
     <label> &lt;p inline style=“font-size:16px”&gt;Hello World&lt;/p&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q16" value="0">
     <label> &lt;p inline style=“font-size 16px”&gt;Hello World&lt;/p&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="1">
-    <label id="correctString3">&lt;p style=“font-size:16px;”&gt;Hello World&lt;/p&gt;</label>
+    <input class="answer" type="radio" name="q16" value="1">
+    <label id="correctString16">&lt;p style=“font-size:16px;”&gt;Hello World&lt;/p&gt;</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q16" value="0">
     <label> &lt;p style=“font-size 16px;”&gt;Hello World&lt;/p&gt;</label>
   </ul>
 </div>
@@ -385,33 +369,33 @@
   <p class="question">7. What is the purpose of using div tags in HTML?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q17" value="0">
     <label>  For creating Different styles.</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q17" value="0">
     <label>For adding headings.</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="0">
+    <input class="answer" type="radio" name="q17" value="0">
     <label>For adding titles.</label>
     <br>
-    <input class="answer" type="radio" name="q4" value="1">
-    <label id="correctString4"> For creating different sections.</label>
+    <input class="answer" type="radio" name="q17" value="1">
+    <label id="correctString17"> For creating different sections.</label>
   </ul>
 </div>
 <div>
   <p class="question">8. Which of the following is not a reserved word in JavaScript?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q18" value="0">
     <label> interface</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="1">
-    <label id="correctString3"> program</label>
+    <input class="answer" type="radio" name="q18" value="1">
+    <label id="correctString18"> program</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q18" value="0">
     <label>throws</label>
     <br>
-    <input class="answer" type="radio" name="q3" value="0">
+    <input class="answer" type="radio" name="q18" value="0">
     <label>short</label>
   </ul>
 </div>
@@ -419,32 +403,32 @@
   <p class="question">9. Where is the correct place to insert a JavaScript?</p>
 
   <ul>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q19" value="0">
     <label>The head section</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="1">
-    <label id="correctString2"> Both the head section and the body section are correct</label>
+    <input class="answer" type="radio" name="q19" value="1">
+    <label id="correctString19"> Both the head section and the body section are correct</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q19" value="0">
     <label>The body section</label>
     <br>
-    <input class="answer" type="radio" name="q2" value="0">
+    <input class="answer" type="radio" name="q19" value="0">
     <label>None of the above</label>
   </ul>
 </div>
 <div>
   <p class="question">10. Which of the following attributes is used to open an hyperlink in new tab?</p>
   <ul>
-  <input class="answer" type="radio" name="q1" value="1">
-    <label id="correctString1">target</label>
+  <input class="answer" type="radio" name="q20" value="1">
+    <label id="correctString20">target</label>
   <br>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q20" value="0">
     <label>tab</label>
     <br>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q20" value="0">
     <label>href</label>
     <br>
-    <input class="answer" type="radio" name="q1" value="0">
+    <input class="answer" type="radio" name="q20" value="0">
     <label>ref</label>
   </ul>
 </div>
@@ -452,9 +436,36 @@
   <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
   type="submit" value="Submit" />
 </div>
+
+<!-- show only wrong answers on submit -->
+<div class="quizAnswers" id="correctAnswer1"></div>
+<div class="quizAnswers" id="correctAnswer2"></div>
+<div class="quizAnswers" id="correctAnswer3"></div>
+<div class="quizAnswers" id="correctAnswer4"></div>
+<div class="quizAnswers" id="correctAnswer5"></div>
+<div class="quizAnswers" id="correctAnswer6"></div>
+<div class="quizAnswers" id="correctAnswer7"></div>
+<div class="quizAnswers" id="correctAnswer8"></div>
+<div class="quizAnswers" id="correctAnswer9"></div>
+<div class="quizAnswers" id="correctAnswer10"></div>
+<div class="quizAnswers" id="correctAnswer11"></div>
+<div class="quizAnswers" id="correctAnswer12"></div>
+<div class="quizAnswers" id="correctAnswer13"></div>
+<div class="quizAnswers" id="correctAnswer14"></div>
+<div class="quizAnswers" id="correctAnswer15"></div>
+<div class="quizAnswers" id="correctAnswer16"></div>
+<div class="quizAnswers" id="correctAnswer17"></div>
+<div class="quizAnswers" id="correctAnswer18"></div>
+<div class="quizAnswers" id="correctAnswer19"></div>
+<div class="quizAnswers" id="correctAnswer20"></div>
+
+<!--show score upon submit-->
+<div>
+<h2 class="quizScore" id="userScore"></h2>
+</div>
+</div>
 </div>
 
 <script src="quiz.js"></script>
-  
 </body>
 </html> 
