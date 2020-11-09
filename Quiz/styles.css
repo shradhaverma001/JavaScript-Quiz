@@ -25,7 +25,7 @@
   text-align: left;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 550;
 }
 
@@ -45,16 +45,24 @@
     /* Style the tab content */
 
 .tabcontent {
-  margin: 20px;
+  margin: 25px;
   padding: 25px;
   /* border: 2px double black; */
   background-color: rgba(211, 211, 211, 0.863);
 }
 
+#Home{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.15em;
+}
+#Home img{
+  margin-top: 20px;
+}
+
    /* ---- answers styling ----- */
 
 .tabcontent ul label{
-  font-size: 16px; 
+  font-size: 17px; 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-top: 0px;
   margin-bottom: 18px;
@@ -149,6 +157,25 @@
   
  /*SFS light red = #c30b0a;
   SFS dark red = #9f2026; */
+
+  /*----- footer styling -------*/
+
+  #footer{
+    background-color:rgba(0, 0, 0, 0.726);
+    color: rgba(255, 255, 255, 0.808);
+    padding: 25px;
+  }
+  #footer form input{
+     
+  }
+  #footer form .field{
+    margin: 20px;
+  }
+  #footer form .field label{
+    color:gainsboro;
+    margin: 10px;
+  }
+
 
        /* ---- large screen devices ----- */
   
