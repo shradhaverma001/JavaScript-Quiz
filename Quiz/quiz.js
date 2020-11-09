@@ -1,6 +1,6 @@
 // scripts here:
 
-function openQuiz(evt, cityName) {
+function openQuiz(evt, cityName, fromNext = false) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -11,7 +11,12 @@ function openQuiz(evt, cityName) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+    if (!fromNext) { 
+        evt.currentTarget.className += " active";
+    } else {
+        document.getElementById("quiz2tabbutton").className += " active";
+        $('html, body').animate({scrollTop : 0},800);
+    }
   }
   
   // Get the element with id="defaultOpen" and click on it
@@ -46,7 +51,11 @@ function submitQuiz() {
         }
     
     // calc score with answerScore function
-        var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
+        // var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
+        var i, calcScore=0;
+        for(i=1;i<=20;i++){
+            calcScore=calcScore+answerScore('q'+i);
+        }
         console.log("CalcScore: " + calcScore); // it works!
     
     // function to return correct answer string
@@ -87,6 +96,36 @@ function submitQuiz() {
         if (answerScore('q10') === 0) {
             document.getElementById('correctAnswer10').innerHTML = correctAnswer('correctString10', 10);
         }
+        if (answerScore('q11') === 0) {
+            document.getElementById('correctAnswer11').innerHTML = correctAnswer('correctString11', 11);
+        }
+        if (answerScore('q12') === 0) {
+            document.getElementById('correctAnswer12').innerHTML = correctAnswer('correctString12', 12);
+        }
+        if (answerScore('q13') === 0) {
+            document.getElementById('correctAnswer13').innerHTML = correctAnswer('correctString13', 13);
+        }
+        if (answerScore('q14') === 0) {
+            document.getElementById('correctAnswer14').innerHTML = correctAnswer('correctString14', 14);
+        }
+        if (answerScore('q15') === 0) {
+            document.getElementById('correctAnswer15').innerHTML = correctAnswer('correctString15', 15);
+        }
+        if (answerScore('q16') === 0) {
+            document.getElementById('correctAnswer16').innerHTML = correctAnswer('correctString16', 16);
+        }
+        if (answerScore('q17') === 0) {
+            document.getElementById('correctAnswer17').innerHTML = correctAnswer('correctString17', 17);
+        }
+        if (answerScore('q18') === 0) {
+            document.getElementById('correctAnswer18').innerHTML = correctAnswer('correctString18', 18);
+        }
+        if (answerScore('q19') === 0) {
+            document.getElementById('correctAnswer19').innerHTML = correctAnswer('correctString19', 19);
+        }
+        if (answerScore('q20') === 0) {
+            document.getElementById('correctAnswer20').innerHTML = correctAnswer('correctString20', 20);
+        }
     
     // calculate "possible score" integer
         var questionCountArray = document.getElementsByClassName('question');
@@ -111,7 +150,7 @@ function submitQuiz() {
 }
 
 function nextQuiz(event) {
-    // openQuiz(event, 'Quiz 2');
+    openQuiz(event, 'Quiz2', true);
 }
 
 $(document).ready(function() {
