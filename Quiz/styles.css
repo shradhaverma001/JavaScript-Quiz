@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 #all{
-    font-family: "Lato", sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgba(147, 112, 216, 0.89);
   }
 
@@ -45,7 +45,7 @@
     /* Style the tab content */
 
 .tabcontent {
-  margin: 25px;
+  margin: 15px;
   padding: 25px;
   /* border: 2px double black; */
   background-color: rgba(211, 211, 211, 0.863);
