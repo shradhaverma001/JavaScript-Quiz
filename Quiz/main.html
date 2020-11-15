@@ -1,244 +1,247 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>QUIZ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>QUIZ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body id="all">
 
-<div class="tab">
-  <button class="tablinks" onclick="openQuiz(event, 'Home')" id="defaultOpen">Home</button>
-  <button id="quiz1tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz1')">C</button>
-  <button id="quiz2tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz2')">HTML, CSS and JS</button>
-</div>
+  <div class="tab">
+    <button class="tablinks" onclick="openQuiz(event, 'Home')" id="defaultOpen">Home</button>
+    <button id="quiz1tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz1')">C</button>
+    <button id="quiz2tabbutton" class="tablinks" onclick="openQuiz(event, 'Quiz2')">HTML, CSS and JS</button>
+  </div>
 
-<div id="Home" class="tabcontent">
-  <h1 style="text-align:center">TechQuiz</h1>
-  <p style="text-align: center">This is a simple game which contains two quizzes. Each quiz is having 10 questions. There is a time limit of 10 minutes for each quiz.<br>
-    First Quiz contains <b>M</b>ultiple <b>C</b>hoice <b>Q</b>uestions <b>(MCQs)</b> based on C programming language
-     and the next quiz is of HTML and CSS. 
-  </p>
-  <img src ="img/js3.jpg" class="img-fluid">
-</div>
+  <div id="Home" class="tabcontent">
+    <h1 style="text-align:center">TechQuiz</h1>
+    <p style="text-align: center">This is a simple game which contains two quizzes. Each quiz is having 10 questions.
+      There is a time limit of 10 minutes for each quiz.<br>
+      First Quiz contains <b>M</b>ultiple <b>C</b>hoice <b>Q</b>uestions <b>(MCQs)</b> based on C programming language
+      and the next quiz is of HTML and CSS.
+    </p>
+    <img src="img/js3.jpg" class="img-fluid">
+  </div>
 
-<div id="Quiz1" class="tabcontent">
-  <h1 style="text-align: center">C Programming Quiz</h1> 
-        <div>
-          <p class="question">1. Which of the following is true</p>
-          <ul>
-          <input class="answer" type="radio" name="q1" value="1">
-            <label id="correctString1">gets() can read a string with spaces but a normal scanf() with %s can not.</label>
-          <br>
-            <input class="answer" type="radio" name="q1" value="0">
-            <label>gets() can read a string with newline chacters but a normal scanf() with %s can not.</label>
-            <br>
-            <input class="answer" type="radio" name="q1" value="0">
-            <label>gets() can always replace scanf() without any additional code.</label>
-            <br>
-            <input class="answer" type="radio" name="q1" value="0">
-            <label>None of the above</label>
-          </ul>
-        </div>
-        <div>
-          <p class="question">2. #include &lt;stdio.h&gt;<br>
-
-            int main()<br>
-            {<br>
-                int i = (1, 2, 3);<br>
-                
-                printf("%d", i);<br>
-                
-                return 0;<br>
-            }<br>
-            </p>
-  
-          <ul>
-            <input class="answer" type="radio" name="q2" value="0">
-            <label>1</label>
-            <br>
-            <input class="answer" type="radio" name="q2" value="1">
-            <label id="correctString2">3</label>
-            <br>
-            <input class="answer" type="radio" name="q2" value="0">
-            <label>Garbage value</label>
-            <br>
-            <input class="answer" type="radio" name="q2" value="0">
-            <label>Compile time error</label>
-          </ul>
-        </div>
-        <div>
-          <p class="question">3. #include &lt;stdio.h&gt;<br> 
-            int i;<br>
-            int main()<br> 
-            {<br>
-                if (i);<br> 
-                else<br>
-                    printf("Ëlse");<br> 
-                return 0;<br> 
-            } <br>
-            What is correct about the above program?</p>
-  
-          <ul>
-            <input class="answer" type="radio" name="q3" value="0">
-            <label> if block is executed.</label>
-            <br>
-            <input class="answer" type="radio" name="q3" value="1">
-            <label id="correctString3">else block is executed.</label>
-            <br>
-            <input class="answer" type="radio" name="q3" value="0">
-            <label>It is unpredictable as i is not initialized.</label>
-            <br>
-            <input class="answer" type="radio" name="q3" value="0">
-            <label>Error: misplaced else</label>
-          </ul>
-      </div>
-        <div>
-          <p class="question">4. Which of the following is true about arrays in C.</p>
-  
-          <ul>
-            <input class="answer" type="radio" name="q4" value="0">
-            <label> For every type T, there can be an array of T.</label>
-            <br>
-            <input class="answer" type="radio" name="q4" value="0">
-            <label>When an array is passed to a function, C compiler creates a copy of array.</label>
-            <br>
-            <input class="answer" type="radio" name="q4" value="0">
-            <label>2D arrays are stored in column major form
-            </label>
-            <br>
-            <input class="answer" type="radio" name="q4" value="1">
-            <label id="correctString4">For every type T except void and function type, there can be an array of T.</label>
-          </ul>
-        </div>
-        <div>
-          <p class="question">5. Predict output of following program<br>
-            int main()<br> 
-            {<br>
-                int i;<br> 
-                int arr[5] = {1};<br> 
-                for (i = 0; i &lt; 5; i++)<br> 
-                    printf("%d ", arr[i]);<br>
-                return 0;<br> 
-            } </p>
-  
-          <ul>
-            <input class="answer" type="radio" name="q5" value="0">
-            <label> 1 followed by four garbage values</label>
-            <br>
-            <input class="answer" type="radio" name="q5" value="0">
-            <label>1 1 1 1 1</label>
-            <br>
-            <input class="answer" type="radio" name="q5" value="1">
-            <label id="correctString5">1 0 0 0 0</label>
-            <br>
-            <input class="answer" type="radio" name="q5" value="0">
-            <label>0 0 0 0 0</label>
-          </ul>
-      </div>
-        <div>
-          <p class="question">6. What does the following fragment of C-program print?<br>
-              char c[] = "GATE2011";<br>
-              char *p =c;<br>
-              printf("%s", p + p[3] - p[1]);<br>
-          </p>
-  
-          <ul>
-              <input class="answer" type="radio" name="q6" value="1">
-              <label id="correctString6">2011</label>
-            <br>
-            <input class="answer" type="radio" name="q6" value="0">
-            <label>E2011</label>
-            <br>
-            <input class="answer" type="radio" name="q6" value="0">
-            <label>GATE2011</label>
-            <br>
-            <input class="answer" type="radio" name="q6" value="0">
-            <label>011</label>
-          </ul>
-        </div>
-        <div>
-        <p class="question">7. Predict the output of below program:<br>
-            #include &lt;stdio.h&gt;<br>
-                int main()<br>
-                {<br>
-                  int arr[5];<br> 
-                  // Assume base address of arr is 2000 and size of integer is 32 bit<br> 
-                  printf("%u %u", arr + 1, &arr + 1);<br>
-                  return 0;<br>
-                }</p>
-
-        <ul>
-          <input class="answer" type="radio" name="q7" value="0">
-          <label>2004 2004</label>
-          <br>
-          <input class="answer" type="radio" name="q7" value="0">
-          <label>The program fails to compile because Address-of operator cannot be used with array name</label>
-          <br>
-          <input class="answer" type="radio" name="q7" value="0">
-          <label>2004 Garbage value</label>
-          <br>
-          <input class="answer" type="radio" name="q7" value="1">
-          <label id="correctString7">2004 2020</label>
-        </ul>
-      </div>
-      <div>
-        <p class="question">8. Which of the following is not a valid declaration in C?<br>
-            1. short int x;<br>
-            2. signed short x;<br> 
-            3. short x;<br>
-            4. unsigned short x; 
-        </p>
-        <ul>
-          <input class="answer" type="radio" name="q8" value="0">
-          <label>3 and 4</label>
+  <div id="Quiz1" class="tabcontent">
+    <h1 style="text-align: center">C Programming Quiz</h1>
+    <div>
+      <p class="question">1. Which of the following is true</p>
+      <ul>
+        <input class="answer" type="radio" name="q1" value="1">
+        <label id="correctString1">gets() can read a string with spaces but a normal scanf() with %s can not.</label>
         <br>
-          <input class="answer" type="radio" name="q8" value="0">
-          <label>2</label>
-          <br>
-          <input class="answer" type="radio" name="q8" value="0">
-          <label>1</label>
-          <br>
-          <input class="answer" type="radio" name="q8" value="1">
-          <label id="correctString8">All are valid</label>
-        </ul>
-      </div>
-      <div>
-        <p class="question">9. Consider the following C program segment:<br>
-          char p[20];<br>
-          char *s = "string";<br> 
-          int length = strlen(s);<br> 
-          int i;<br>
-          for (i = 0; i &lt; length; i++)<br> 
-            p[i] = s[length — i];<br>
-          printf("%s", p); <br>
-          The output of the program is?<br> 
-        </p>
+        <input class="answer" type="radio" name="q1" value="0">
+        <label>gets() can read a string with newline chacters but a normal scanf() with %s can not.</label>
+        <br>
+        <input class="answer" type="radio" name="q1" value="0">
+        <label>gets() can always replace scanf() without any additional code.</label>
+        <br>
+        <input class="answer" type="radio" name="q1" value="0">
+        <label>None of the above</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">2. #include &lt;stdio.h&gt;<br>
 
-        <ul>
-          <input class="answer" type="radio" name="q9" value="0">
-          <label> gnirts</label>
-          <br>
-          <input class="answer" type="radio" name="q9" value="0">
-          <label>gnirt</label>
-          <br>
-          <input class="answer" type="radio" name="q9" value="1">
-          <label id="correctString9">no output is printed</label>
-          <br>
-          <input class="answer" type="radio" name="q9" value="0">
-          <label>string</label>
-        </ul>
+        int main()<br>
+        {<br>
+          int i = (1, 2, 3);<br>
+
+          printf("%d", i);<br>
+
+          return 0;<br>
+        }<br>
+      </p>
+
+      <ul>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>1</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="1">
+        <label id="correctString2">3</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>Garbage value</label>
+        <br>
+        <input class="answer" type="radio" name="q2" value="0">
+        <label>Compile time error</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">3. #include &lt;stdio.h&gt;<br>
+        int i;<br>
+        int main()<br>
+        {<br>
+          if (i);<br>
+          else<br>
+            printf("Ëlse");<br>
+          return 0;<br>
+        } <br>
+        What is correct about the above program?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label> if block is executed.</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="1">
+        <label id="correctString3">else block is executed.</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label>It is unpredictable as i is not initialized.</label>
+        <br>
+        <input class="answer" type="radio" name="q3" value="0">
+        <label>Error: misplaced else</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">4. Which of the following is true about arrays in C.</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label> For every type T, there can be an array of T.</label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label>When an array is passed to a function, C compiler creates a copy of array.</label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="0">
+        <label>2D arrays are stored in column major form
+        </label>
+        <br>
+        <input class="answer" type="radio" name="q4" value="1">
+        <label id="correctString4">For every type T except void and function type, there can be an array of T.</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">5. Predict output of following program<br>
+        int main()<br>
+        {<br>
+          int i;<br>
+          int arr[5] = {1};<br>
+          for (i = 0; i &lt; 5; i++)<br>
+          printf("%d ", arr[i]);<br>
+          return 0;<br>
+        } </p>
+
+      <ul>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label> 1 followed by four garbage values</label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label>1 1 1 1 1</label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="1">
+        <label id="correctString5">1 0 0 0 0</label>
+        <br>
+        <input class="answer" type="radio" name="q5" value="0">
+        <label>0 0 0 0 0</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">6. What does the following fragment of C-program print?<br>
+        char c[] = "GATE2011";<br>
+        char *p =c;<br>
+        printf("%s", p + p[3] - p[1]);<br>
+      </p>
+
+      <ul>
+        <input class="answer" type="radio" name="q6" value="1">
+        <label id="correctString6">2011</label>
+        <br>
+        <input class="answer" type="radio" name="q6" value="0">
+        <label>E2011</label>
+        <br>
+        <input class="answer" type="radio" name="q6" value="0">
+        <label>GATE2011</label>
+        <br>
+        <input class="answer" type="radio" name="q6" value="0">
+        <label>011</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">7. Predict the output of below program:<br>
+        #include &lt;stdio.h&gt;<br>
+        int main()<br>
+        {<br>
+          int arr[5];<br>
+          // Assume base address of arr is 2000 and size of integer is 32 bit<br>
+          printf("%u %u", arr + 1, &arr + 1);<br>
+          return 0;<br>
+        }</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q7" value="0">
+        <label>2004 2004</label>
+        <br>
+        <input class="answer" type="radio" name="q7" value="0">
+        <label>The program fails to compile because Address-of operator cannot be used with array name</label>
+        <br>
+        <input class="answer" type="radio" name="q7" value="0">
+        <label>2004 Garbage value</label>
+        <br>
+        <input class="answer" type="radio" name="q7" value="1">
+        <label id="correctString7">2004 2020</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">8. Which of the following is not a valid declaration in C?<br>
+        1. short int x;<br>
+        2. signed short x;<br>
+        3. short x;<br>
+        4. unsigned short x;
+      </p>
+      <ul>
+        <input class="answer" type="radio" name="q8" value="0">
+        <label>3 and 4</label>
+        <br>
+        <input class="answer" type="radio" name="q8" value="0">
+        <label>2</label>
+        <br>
+        <input class="answer" type="radio" name="q8" value="0">
+        <label>1</label>
+        <br>
+        <input class="answer" type="radio" name="q8" value="1">
+        <label id="correctString8">All are valid</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">9. Consider the following C program segment:<br>
+        char p[20];<br>
+        char *s = "string";<br>
+        int length = strlen(s);<br>
+        int i;<br>
+        for (i = 0; i &lt; length; i++)<br>
+          p[i] = s[length — i];<br>
+        printf("%s", p); <br>
+        The output of the program is?<br>
+      </p>
+
+      <ul>
+        <input class="answer" type="radio" name="q9" value="0">
+        <label> gnirts</label>
+        <br>
+        <input class="answer" type="radio" name="q9" value="0">
+        <label>gnirt</label>
+        <br>
+        <input class="answer" type="radio" name="q9" value="1">
+        <label id="correctString9">no output is printed</label>
+        <br>
+        <input class="answer" type="radio" name="q9" value="0">
+        <label>string</label>
+      </ul>
     </div>
     <div>
       <p class="question">10. In C, what is the meaning of following function prototype with empty parameter list<br>
 
         void fun() <br>
-      { <br>
+        { <br>
         /* .... */<br>
-      }
-        </p>
+        }
+      </p>
 
       <ul>
         <input class="answer" type="radio" name="q10" value="0">
@@ -256,250 +259,251 @@
       </ul>
     </div>
     <div class="submitter">
-            <input class="quizSubmit" id="nextButton" onClick="nextQuiz(event)"
-            type="submit" value="next" />
-      </div>
+      <input class="quizSubmit" id="nextButton" onClick="nextQuiz(event)" type="submit" value="next" />
+    </div>
+  </div>
+
+  <div id="Quiz2" class="tabcontent">
+    <h1 style="text-align: center">HTML, CSS and JavaScript Quiz</h1>
+    <div>
+      <p class="question">1. How is document type initialized in HTML5?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q11" value="0">
+        <label> &lt;/DOCTYPE HTML&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q11" value="1">
+        <label id="correctString11"> &lt;!DOCTYPE HTML&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q11" value="0">
+        <label> &lt;/DOCTYPE&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q11" value="0">
+        <label> &lt;/DOCTYPE html&gt;</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">2. What is the full form of CSS?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q12" value="0">
+        <label> Color style sheet</label>
+        <br>
+        <input class="answer" type="radio" name="q12" value="0">
+        <label> Creative style sheet</label>
+        <br>
+        <input class="answer" type="radio" name="q12" value="1">
+        <label id="correctString12">Cascading style sheet</label>
+        <br>
+        <input class="answer" type="radio" name="q12" value="0">
+        <label>Concatenated style sheet</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">3. Which of the following attributes is used to add link to any element?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q13" value="0">
+        <label> link</label>
+        <br>
+        <input class="answer" type="radio" name="q13" value="0">
+        <label>ref</label>
+        <br>
+        <input class="answer" type="radio" name="q13" value="0">
+        <label>newref</label>
+        <br>
+        <input class="answer" type="radio" name="q13" value="1">
+        <label id="correctString13">href</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">4. Which of the following is the correct CSS syntax?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q14" value="0">
+        <label>p:color=green, font-size=15px</label>
+        <br>
+        <input class="answer" type="radio" name="q14" value="0">
+        <label>{p:color=green, font-size=15px}</label>
+        <br>
+        <input class="answer" type="radio" name="q14" value="0">
+        <label>p {color:green, font-size:15px;}</label>
+        <br>
+        <input class="answer" type="radio" name="q14" value="1">
+        <label id="correctString14">p {color:green; font-size:15px;}</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">5. What is the HTML tag under which one can write the JavaScript code?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q15" value="1">
+        <label id="correctString15">&lt;script&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q15" value="0">
+        <label>&lt;javascript&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q15" value="0">
+        <label> &lt;scripted&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q15" value="0">
+        <label>&lt;js&gt;</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">6. Which one of the following is the correct way of adding Inline styles.</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q16" value="0">
+        <label> &lt;p inline style=“font-size:16px”&gt;Hello World&lt;/p&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q16" value="0">
+        <label> &lt;p inline style=“font-size 16px”&gt;Hello World&lt;/p&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q16" value="1">
+        <label id="correctString16">&lt;p style=“font-size:16px;”&gt;Hello World&lt;/p&gt;</label>
+        <br>
+        <input class="answer" type="radio" name="q16" value="0">
+        <label> &lt;p style=“font-size 16px;”&gt;Hello World&lt;/p&gt;</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">7. What is the purpose of using div tags in HTML?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q17" value="0">
+        <label> For creating Different styles.</label>
+        <br>
+        <input class="answer" type="radio" name="q17" value="0">
+        <label>For adding headings.</label>
+        <br>
+        <input class="answer" type="radio" name="q17" value="0">
+        <label>For adding titles.</label>
+        <br>
+        <input class="answer" type="radio" name="q17" value="1">
+        <label id="correctString17"> For creating different sections.</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">8. Which of the following is not a reserved word in JavaScript?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q18" value="0">
+        <label> interface</label>
+        <br>
+        <input class="answer" type="radio" name="q18" value="1">
+        <label id="correctString18"> program</label>
+        <br>
+        <input class="answer" type="radio" name="q18" value="0">
+        <label>throws</label>
+        <br>
+        <input class="answer" type="radio" name="q18" value="0">
+        <label>short</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">9. Where is the correct place to insert a JavaScript?</p>
+
+      <ul>
+        <input class="answer" type="radio" name="q19" value="0">
+        <label>The head section</label>
+        <br>
+        <input class="answer" type="radio" name="q19" value="1">
+        <label id="correctString19"> Both the head section and the body section are correct</label>
+        <br>
+        <input class="answer" type="radio" name="q19" value="0">
+        <label>The body section</label>
+        <br>
+        <input class="answer" type="radio" name="q19" value="0">
+        <label>None of the above</label>
+      </ul>
+    </div>
+    <div>
+      <p class="question">10. Which of the following attributes is used to open an hyperlink in new tab?</p>
+      <ul>
+        <input class="answer" type="radio" name="q20" value="1">
+        <label id="correctString20">target</label>
+        <br>
+        <input class="answer" type="radio" name="q20" value="0">
+        <label>tab</label>
+        <br>
+        <input class="answer" type="radio" name="q20" value="0">
+        <label>href</label>
+        <br>
+        <input class="answer" type="radio" name="q20" value="0">
+        <label>ref</label>
+      </ul>
+    </div>
+    <div class="submitter">
+      <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
     </div>
 
-<div id="Quiz2" class="tabcontent">
-  <h1 style="text-align: center">HTML, CSS and JavaScript Quiz</h1>
-  <div>
-  <p class="question">1. How is document type initialized in HTML5?</p>
+    <!-- show only wrong answers on submit -->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+    <div class="quizAnswers" id="correctAnswer5"></div>
+    <div class="quizAnswers" id="correctAnswer6"></div>
+    <div class="quizAnswers" id="correctAnswer7"></div>
+    <div class="quizAnswers" id="correctAnswer8"></div>
+    <div class="quizAnswers" id="correctAnswer9"></div>
+    <div class="quizAnswers" id="correctAnswer10"></div>
+    <div class="quizAnswers" id="correctAnswer11"></div>
+    <div class="quizAnswers" id="correctAnswer12"></div>
+    <div class="quizAnswers" id="correctAnswer13"></div>
+    <div class="quizAnswers" id="correctAnswer14"></div>
+    <div class="quizAnswers" id="correctAnswer15"></div>
+    <div class="quizAnswers" id="correctAnswer16"></div>
+    <div class="quizAnswers" id="correctAnswer17"></div>
+    <div class="quizAnswers" id="correctAnswer18"></div>
+    <div class="quizAnswers" id="correctAnswer19"></div>
+    <div class="quizAnswers" id="correctAnswer20"></div>
 
-  <ul>
-    <input class="answer" type="radio" name="q11" value="0">
-    <label>  &lt;/DOCTYPE HTML&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q11" value="1">
-    <label id="correctString11"> &lt;!DOCTYPE HTML&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q11" value="0">
-    <label>  &lt;/DOCTYPE&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q11" value="0">
-    <label> &lt;/DOCTYPE html&gt;</label>
-  </ul>
-</div>
-  <div>
-    <p class="question">2. What is the full form of CSS?</p>
-
-    <ul>
-      <input class="answer" type="radio" name="q12" value="0">
-      <label>  Color style sheet</label>
-      <br>
-      <input class="answer" type="radio" name="q12" value="0">
-      <label> Creative style sheet</label>
-      <br>
-      <input class="answer" type="radio" name="q12" value="1">
-      <label id="correctString12">Cascading style sheet</label>
-      <br>
-      <input class="answer" type="radio" name="q12" value="0">
-      <label>Concatenated style sheet</label>
-    </ul>
-</div>
-<div>
-  <p class="question">3. Which of the following attributes is used to add link to any element?</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q13" value="0">
-    <label> link</label>
-  <br>
-    <input class="answer" type="radio" name="q13" value="0">
-    <label>ref</label>
-    <br>
-    <input class="answer" type="radio" name="q13" value="0">
-    <label>newref</label>
-    <br>
-    <input class="answer" type="radio" name="q13" value="1">
-    <label id="correctString13">href</label>
-  </ul>
-</div>
-<div>
-  <p class="question">4. Which of the following is the correct CSS syntax?</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q14" value="0">
-    <label>p:color=green, font-size=15px</label>
-    <br>
-    <input class="answer" type="radio" name="q14" value="0">
-    <label>{p:color=green, font-size=15px}</label>
-    <br>
-    <input class="answer" type="radio" name="q14" value="0">
-    <label>p {color:green, font-size:15px;}</label>
-    <br>
-    <input class="answer" type="radio" name="q14" value="1">
-    <label id="correctString14">p {color:green; font-size:15px;}</label>
-  </ul>
-</div>
-<div>
-  <p class="question">5. What is the HTML tag under which one can write the JavaScript code?</p>
-
-  <ul>
-      <input class="answer" type="radio" name="q15" value="1">
-      <label id="correctString15">&lt;script&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q15" value="0">
-    <label>&lt;javascript&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q15" value="0">
-    <label> &lt;scripted&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q15" value="0">
-    <label>&lt;js&gt;</label>
-  </ul>
-</div>
-<div>
-  <p class="question">6. Which one of the following is the correct way of adding Inline styles.</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q16" value="0">
-    <label> &lt;p inline style=“font-size:16px”&gt;Hello World&lt;/p&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q16" value="0">
-    <label> &lt;p inline style=“font-size 16px”&gt;Hello World&lt;/p&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q16" value="1">
-    <label id="correctString16">&lt;p style=“font-size:16px;”&gt;Hello World&lt;/p&gt;</label>
-    <br>
-    <input class="answer" type="radio" name="q16" value="0">
-    <label> &lt;p style=“font-size 16px;”&gt;Hello World&lt;/p&gt;</label>
-  </ul>
-</div>
-<div>
-  <p class="question">7. What is the purpose of using div tags in HTML?</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q17" value="0">
-    <label>  For creating Different styles.</label>
-    <br>
-    <input class="answer" type="radio" name="q17" value="0">
-    <label>For adding headings.</label>
-    <br>
-    <input class="answer" type="radio" name="q17" value="0">
-    <label>For adding titles.</label>
-    <br>
-    <input class="answer" type="radio" name="q17" value="1">
-    <label id="correctString17"> For creating different sections.</label>
-  </ul>
-</div>
-<div>
-  <p class="question">8. Which of the following is not a reserved word in JavaScript?</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q18" value="0">
-    <label> interface</label>
-    <br>
-    <input class="answer" type="radio" name="q18" value="1">
-    <label id="correctString18"> program</label>
-    <br>
-    <input class="answer" type="radio" name="q18" value="0">
-    <label>throws</label>
-    <br>
-    <input class="answer" type="radio" name="q18" value="0">
-    <label>short</label>
-  </ul>
-</div>
-<div>
-  <p class="question">9. Where is the correct place to insert a JavaScript?</p>
-
-  <ul>
-    <input class="answer" type="radio" name="q19" value="0">
-    <label>The head section</label>
-    <br>
-    <input class="answer" type="radio" name="q19" value="1">
-    <label id="correctString19"> Both the head section and the body section are correct</label>
-    <br>
-    <input class="answer" type="radio" name="q19" value="0">
-    <label>The body section</label>
-    <br>
-    <input class="answer" type="radio" name="q19" value="0">
-    <label>None of the above</label>
-  </ul>
-</div>
-<div>
-  <p class="question">10. Which of the following attributes is used to open an hyperlink in new tab?</p>
-  <ul>
-  <input class="answer" type="radio" name="q20" value="1">
-    <label id="correctString20">target</label>
-  <br>
-    <input class="answer" type="radio" name="q20" value="0">
-    <label>tab</label>
-    <br>
-    <input class="answer" type="radio" name="q20" value="0">
-    <label>href</label>
-    <br>
-    <input class="answer" type="radio" name="q20" value="0">
-    <label>ref</label>
-  </ul>
-</div>
-<div class="submitter">
-  <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
-  type="submit" value="Submit" />
-</div>
-
-<!-- show only wrong answers on submit -->
-<div class="quizAnswers" id="correctAnswer1"></div>
-<div class="quizAnswers" id="correctAnswer2"></div>
-<div class="quizAnswers" id="correctAnswer3"></div>
-<div class="quizAnswers" id="correctAnswer4"></div>
-<div class="quizAnswers" id="correctAnswer5"></div>
-<div class="quizAnswers" id="correctAnswer6"></div>
-<div class="quizAnswers" id="correctAnswer7"></div>
-<div class="quizAnswers" id="correctAnswer8"></div>
-<div class="quizAnswers" id="correctAnswer9"></div>
-<div class="quizAnswers" id="correctAnswer10"></div>
-<div class="quizAnswers" id="correctAnswer11"></div>
-<div class="quizAnswers" id="correctAnswer12"></div>
-<div class="quizAnswers" id="correctAnswer13"></div>
-<div class="quizAnswers" id="correctAnswer14"></div>
-<div class="quizAnswers" id="correctAnswer15"></div>
-<div class="quizAnswers" id="correctAnswer16"></div>
-<div class="quizAnswers" id="correctAnswer17"></div>
-<div class="quizAnswers" id="correctAnswer18"></div>
-<div class="quizAnswers" id="correctAnswer19"></div>
-<div class="quizAnswers" id="correctAnswer20"></div>
-
-<!--show score upon submit-->
-<div>
-<h2 class="quizScore" id="userScore"></h2>
-</div>
-</div>
-</div>
-
-     <!---- footer ----->
-<section id="footer">
-<div class="inner">
-  <h2 class="major">Get in touch</h2>
-  <p>
-    Hey, let's get in touch if you're interested.
-    <br />Fill the form below to mail me.
-  </p>
-  <hr style="background-color: white; height: 1.3px;">
-
-  <form action="main.html">
-    <div class="fields">
-      <div class="field">
-        <label for="name">NAME</label>
-        <input type="text" name="name" id="name" placeholder="Enter your Name" />
-      </div>
-
-      <div class="field">
-        <label for="email">EMAIL</label>
-        <input type="email" name="_replyto" id="email" placeholder="Enter your Email"/>
-      </div>
-      <div class="field">
-        <label for="message" >MESSAGE</label>
-        <textarea name="message" id="message" rows="3" placeholder="Enter your suggestions"></textarea>
-      </div>
+    <!--show score upon submit-->
+    <div>
+      <h2 class="quizScore" id="userScore"></h2>
     </div>
-      <input class="actions" type="submit" value="Send Message" style="background-color:rgba(255, 0, 0, 0.822); margin-left: 40px; color: white; padding: 4px;"/>
-    </ul>
-  </form>
-  <br>
-  <hr style="background-color: white; height: 1px;">
-  <p style="color: rgba(0, 255, 0, 0.932); text-align: center;;">!!! Made by Shradha Verma and Suryansh Maheshwari</p>
-</section>
+  </div>
+  </div>
 
-<script src="quiz.js"></script>
+  <!---- footer ----->
+  <section id="footer">
+    <div class="inner">
+      <h2 class="major">Get in touch</h2>
+      <p>
+        Hey, let's get in touch if you're interested.
+        <br />Fill the form below to mail me.
+      </p>
+      <hr style="background-color: white; height: 1.3px;">
+
+      <form action="main.html">
+        <div class="fields">
+          <div class="field">
+            <label for="name">NAME</label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name" />
+          </div>
+
+          <div class="field">
+            <label for="email">EMAIL</label>
+            <input type="email" name="_replyto" id="email" placeholder="Enter your Email" />
+          </div>
+          <div class="field">
+            <label for="message">MESSAGE</label>
+            <textarea name="message" id="message" rows="3" placeholder="Enter your suggestions"></textarea>
+          </div>
+        </div>
+        <input class="actions" type="submit" value="Send Message"
+          style="background-color:rgba(255, 0, 0, 0.822); margin-left: 40px; color: white; padding: 4px;" />
+        </ul>
+      </form>
+      <br>
+      <hr style="background-color: white; height: 1px;">
+      <p style="color: rgba(0, 255, 0, 0.932); text-align: center;;">!!! Made by Shradha Verma and Suryansh Maheshwari
+      </p>
+  </section>
+
+  <script src="quiz.js"></script>
 </body>
-</html> 
+
+</html>
