@@ -130,7 +130,7 @@ function submitQuiz() {
             questionCounter++;
         }
 
-        // show score as "score/possible score"
+        // show score as "Your score/possible score"
         var showScore = "Your Score: " + calcScore + "/" + questionCounter;
         // if 20/20, "perfect score!"
         if (calcScore === questionCounter) {
