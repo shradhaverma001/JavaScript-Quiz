@@ -1,12 +1,12 @@
 *{
   box-sizing: border-box;
 }
-#all{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgba(147, 112, 216, 0.89);
-  }
 
-  /* Style the tab */
+#all{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgba(147, 112, 216, 0.89);
+}
+
 .tab {
   border: 1.5px solid rgba(204, 204, 204, 0);
   background-color: #f1f1f1;
@@ -14,7 +14,6 @@
   margin: 15px;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
   display: block;
   background-color: inherit;
@@ -28,26 +27,21 @@
   font-size: 20px;
   font-weight: 550;
 }
-
-
-      /* buttons on hover */
       
+/* buttons on hover */
 .tab button:hover {
   background-color: rgba(128, 128, 128, 0.541);
 }
 
-   /* Create an active/current "tab button" class */
-
+/* Create an active/current "tab button" class */
 .tab button.active {
   background-color: rgba(28, 199, 37, 0.781);
 }
 
-    /* Style the tab content */
-
+/* Style the tab content */
 .tabcontent {
   margin: 15px;
   padding: 25px;
-  /* border: 2px double black; */
   background-color: rgba(211, 211, 211, 0.863);
 }
 
@@ -55,12 +49,12 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.15em;
 }
+
 #Home img{
   margin-top: 20px;
 }
 
-   /* ---- answers styling ----- */
-
+/* ---- answers styling ----- */
 .tabcontent ul label{
   font-size: 17px; 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -68,117 +62,109 @@
   margin-bottom: 18px;
 }
 
-    /*  ----- questions styling ------ */
+/*  ----- questions styling ------ */
+p.question {
+  font-family: Arial, sans-serif;
+  font-size:23px;
+  color: #2E2E2E;
+  margin-top: 25px;
+}
+  
+h2.quizHeader {
+  font-family: Arial, sans-serif;
+  font-weight:normal;
+  font-size:25px;
+  line-height: 27px;
+  margin: 24px 0 12px 0;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid #a2a2a2;
+}
+  
+h2.quizScore{
+  font-family: Arial, sans-serif;
+  font-size:25px;
+}
 
-  p.question {
-    font-family: Arial, sans-serif;
-    font-size:23px;
-    color: #2E2E2E;
-    margin-top: 25px;
-  }
-  
-  h2.quizHeader {
-    font-family: Arial, sans-serif;
-    font-weight:normal;
-    font-size:25px;
-    line-height: 27px;
-    margin: 24px 0 12px 0;
-    padding: 0 0 4px 0;
-    border-bottom: 1px solid #a2a2a2;
-  }
-  
-  h2.quizScore{
-    font-family: Arial, sans-serif;
-    font-size:25px;
-  }
-  
-  div.quizAnswers{
-    font-family: Arial, sans-serif;
-    font-size:16px;
-    color: #424242;
-    padding: 4px 0 4px 0;
-  }
-  
-  label {
-    font-family: Arial, sans-serif;
-    font-size:14px;
-    color: #424242;
-    vertical-align:top;
-  }
-  
-  input.answer[type="radio"] {
-    margin-bottom: 10px;
-  }
-  
-  input.quizSubmit[type="submit"] {
-    -webkit-background-clip: border-box;
-    -webkit-background-origin: padding-box;
-    -webkit-background-size: auto;
-    -webkit-transition-delay: 0s, 0s;
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-property: color, background-color;
-    -webkit-transition-timing-function: ease, ease;
-    box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
-    color: #ffffff;
-    background-color: #c30b0a;
-    margin: 0;
-    border: 0;
-    outline: 0;
-    text-transform:uppercase;
-    height:35px;
-    width:85px;
-    border: 1px solid #5E5E5E;
-    border-radius:5px;
-    
-   }
-  
-  input.quizSubmit[type="submit"]:hover {
-    color: #ffffff;
-    background: #680f11;
-    text-decoration: none;
-  }
-  
-  table {
-    background-color: #F2F2F2;
-    border:1px solid #BDBDBD;
-    border-radius:5px;
-    padding:10px;
-    padding-left:25px;
-    box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
-  }
-  
-  .submitter {
-        width:85px;
-  }
-  
-  .hide {
-        display:none;
-  }
-  
- /*SFS light red = #c30b0a;
-  SFS dark red = #9f2026; */
+div.quizAnswers{
+  font-family: Arial, sans-serif;
+  font-size:16px;
+  color: #424242;
+  padding: 4px 0 4px 0;
+}
 
-  /*----- footer styling -------*/
-
-  #footer{
-    background-color:rgba(0, 0, 0, 0.726);
-    color: rgba(255, 255, 255, 0.808);
-    padding: 25px;
-  }
-  #footer form input{
-     
-  }
-  #footer form .field{
-    margin: 20px;
-  }
-  #footer form .field label{
-    color:gainsboro;
-    margin: 10px;
-  }
-
-
-       /* ---- large screen devices ----- */
+label {
+  font-family: Arial, sans-serif;
+  font-size:14px;
+  color: #424242;
+  vertical-align:top;
+}
   
+input.answer[type="radio"] {
+  margin-bottom: 10px;
+}
+
+input.quizSubmit[type="submit"] {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: color, background-color;
+  -webkit-transition-timing-function: ease, ease;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  color: #ffffff;
+  background-color: #c30b0a;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-transform:uppercase;
+  height:35px;
+  width:85px;
+  border: 1px solid #5E5E5E;
+  border-radius:5px;
+}
+  
+input.quizSubmit[type="submit"]:hover {
+  color: #ffffff;
+  background: #680f11;
+  text-decoration: none;
+}
+
+table {
+  background-color: #F2F2F2;
+  border:1px solid #BDBDBD;
+  border-radius:5px;
+  padding:10px;
+  padding-left:25px;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
+}
+
+.submitter {
+  width:85px;
+}
+  
+.hide {
+  display:none;
+}
+
+/*----- footer styling -------*/
+
+#footer{
+  background-color:rgba(0, 0, 0, 0.726);
+  color: rgba(255, 255, 255, 0.808);
+  padding: 25px;
+}
+
+#footer form .field{
+  margin: 20px;
+}
+
+#footer form .field label{
+  color:gainsboro;
+  margin: 10px;
+}
+
+/* ---- large screen devices ----- */
 @media(min-width: 1100px)
 {
   #Home img{
@@ -186,7 +172,3 @@
     height: 600px;
   }
 }
-
-   
-  
-  
