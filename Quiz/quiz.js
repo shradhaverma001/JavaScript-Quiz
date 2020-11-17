@@ -25,9 +25,9 @@ function openQuiz(evt, cityName, fromNext = false) {
 
 function submitQuiz() {
     
-     var userPreference;
 
-    if (confirm("Are you sure to submit quizzes ?") == true) {
+    if (confirm("Are you sure to submit quizzes ?") == true)
+    {
 
         // 	document.getElementById("msg").innerHTML = userPreference;
 
@@ -144,9 +144,6 @@ function submitQuiz() {
         document.getElementById('userScore').innerHTML = showScore;
     }
     
-    else {
-        userPreference = "Save Canceled!";
-    }
 }
 
 function nextQuiz(event) {
