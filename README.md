@@ -1,4 +1,4 @@
-# JavaScript-Quiz
+# Tech-Quiz
 This is a simple quiz game consisting of two quizzes- one is based on C programming language and the other is of HTML, CSS and JavaScript.
 
 # About the Quiz
